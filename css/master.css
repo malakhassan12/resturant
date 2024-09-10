@@ -753,6 +753,18 @@ html{
 
 }
 
+@media (min-width: 768px) and (max-width: 991px) { /* Small Screen Rules */
+  .container {
+      width: 750px
+  }
+  .visible-sm {
+      display: block !important
+  }
+  .hidden-sm {
+      display: none !important
+  }
+}
+
 
 
 /*========================================== top ===========================================================*/

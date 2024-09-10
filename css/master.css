@@ -1,0 +1,3246 @@
+/*====================== general ==================*/
+
+
+body{
+    background-color: rgb(54, 52, 52);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+    font-family: "EB Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-family: "Domine", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    
+}
+
+html{
+
+  scroll-behavior: smooth;/*newwwwwwwwwwwwwwwwwwwwwwww*/
+  font-size: 62.5%;
+  scroll-padding-top: 9rem;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  
+}
+
+:root{
+  --main-color:#e056fd;
+  --bg-color:#14074B;
+  --white:#fff;
+  --light-white:rgba(255,255,255,0.8);
+  --box-shadow:0 0.5rem 1rem rgba(0,0,0,0.3);
+  --border:0.2rem solid rgba(255,255,255,0.1);
+  --black:rgb(0, 0, 0);
+  
+
+}
+
+
+
+
+
+/*============================ home page ===============================*/
+.home {
+  position: relative;
+  width: 100%;
+  min-height: 850px;
+  overflow: hidden;
+}
+
+.home .back {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; /* Ensure no repeat */
+  z-index: -1;
+  position: absolute; /* Positioned absolutely to scale only the background */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: background-image 1s ease-in-out; /* Smooth transition for background image */
+  transform-origin: center; /* Center scaling effect */
+  background-image: url("../photos/Meghan Markle’s Spaghetti _ Franska_nl_LE_auto_x2.jpg");
+
+}
+
+.scale-in {
+  animation: scaleUp 70s forwards; /* Apply scale-up animation */
+
+}
+
+#diffrent {
+  opacity: 0;
+  transform: translateY(-100px); /* Start above and out of view */
+  transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+  font-size: 56px;
+}
+
+#diffrent.fade-in {
+  opacity: 1;
+  transform: translateY(0); /* Move into the correct position */
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(1); /* Start with original size */
+  }
+  to {
+    transform: scale(1.9); /* End at scaled-up size */
+  }
+}
+
+
+.home .overlay{
+  width: 100%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.466);
+  min-height: 850px;
+  position: relative;
+  z-index: 1; /* Ensure content is above the background */
+}
+
+/*__________________________________________________________*/
+
+.home .overlay .info{
+  width: 100%;
+  font-size: 12px;
+  text-transform: capitalize;
+  height: 54px;
+  transition:  1s ease;
+  
+}
+
+.home .overlay .info .child{
+  width: calc(100%/2);
+  display: flex;
+  height: 100%;
+}
+
+.home .overlay .info .child p{
+  width: 50%;
+}
+
+
+/*____________________________________________________________*/
+
+.home .overlay header{
+  width:100% ;
+  height: 100px;
+  position: fixed;
+  z-index: 2;
+  padding-top: 1%;
+  transition: top 0.3s ease, background-color 1s ease;
+
+  
+}
+
+.home .overlay header .logo{
+  width: 21%;
+  height: 100%;
+  font-size: 15px;
+  text-transform: capitalize;
+  margin-left: 1%;
+
+}
+.home .overlay header .logo img{
+  width: 77px;
+}
+.home .overlay header .logo span{
+  font-size: 33px;
+}
+.home .overlay header ul{
+  width: 60%;
+  height: 100%;
+  font-size: 19px;
+  list-style: none;
+  text-transform: capitalize;
+  text-align: center;
+  margin-right: 1%;
+}
+.home .overlay header ul li{
+  width: 20%;
+  display: block;
+  text-align: center;
+  position: relative;
+  transition: 0.6s ;
+  cursor: pointer;
+  overflow: hidden;
+  margin-top: 32px;
+}
+.home .overlay header ul li a{
+  text-decoration: none;
+  color: white;
+  position: relative;
+  display: inline-block;
+  
+}
+.home .overlay header ul li hr{
+  width: 0;
+  color: white; /* Ensure the color matches the background */
+  transition: width 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Smooth transition for width and opacity */
+  opacity: 0;
+  cursor: pointer;
+}
+
+.home .overlay header ul li:hover hr {
+  width: 100px; /* Expand to full width on hover */
+  opacity: 1;
+}
+.home .overlay header .list{
+  display: none;
+}
+
+
+
+#llist{
+  display: none;
+}
+
+
+
+.home .overlay header .main {
+
+  width: 16%;
+  height: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 22px;
+  background-color: #ec9;
+
+  color: black;
+  letter-spacing: 3px;
+  border: 1px solid #ec9;
+  transition: 0.5s linear;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 8px;
+    
+}
+
+.home .overlay header .main button[type=submit] {
+  width: 100%;
+  font-size: 11px;
+  border: none;
+  border-radius: 8px;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  color: black;
+  letter-spacing: 3px;  align-items: center;text-transform: uppercase;
+}
+
+.home .overlay header .main button[type=submit]::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  border-radius: 8px;
+}
+
+.home .overlay header .main button[type=submit]:hover::before {
+  background-color: black;
+  animation: loadingWave 4s linear;
+}
+.home .overlay header .main button[type=submit]:hover p{
+  width: 100%;
+  color: white;position: relative;transition: 4s;display: block;
+}
+@keyframes loadingWave {
+  0% {
+      clip-path: polygon(0% 100%, 100% 100%, 99% 100%, 81% 100%, 64% 100%, 46% 100%, 29% 100%, 14% 100%, 0 100%);
+  }
+
+  10% {
+      clip-path: polygon(0% 100%, 100% 100%, 100% 90%, 84% 94%, 66% 95%, 47% 94%, 31% 95%, 14% 96%, 0 94%);    
+  }
+
+  20% {
+      clip-path: polygon(0% 100%, 100% 100%, 100% 74%, 81% 72%, 63% 72%, 44% 75%, 33% 77%, 16% 78%, 0 74%);                
+  }
+
+  40% {
+      clip-path: polygon(0% 100%, 100% 100%, 100% 53%, 85% 55%, 67% 58%, 44% 54%, 30% 48%, 15% 47%, 0 49%);                
+  }
+
+  60% {
+      clip-path: polygon(0% 100%, 100% 100%, 100% 24%, 86% 25%, 69% 29%, 53% 34%, 37% 38%, 18% 40%, 0 38%); 
+  }
+  
+  80% {
+      clip-path: polygon(0% 100%, 100% 100%, 100% 22%, 84% 29%, 67% 31%, 45% 27%, 26% 17%, 12% 14%, 0 15%);    
+  }
+
+  90% {
+      clip-path: polygon(0% 100%, 100% 100%, 100% 5%, 86% 10%, 73% 10%, 55% 6%, 33% 3%, 15% 5%, 0 9%);   
+  }
+
+  100% {
+      clip-path: polygon(0% 100%, 100% 100%, 100% 0, 86% 0, 71% 0, 55% 0, 34% 0, 18% 0, 0 0);    
+  }
+}
+
+
+
+
+
+
+
+/*__________________________________________________________________*/
+
+.home .overlay section{
+
+  height: 496px;
+  margin-top: 120px;
+}
+
+.home .overlay section .unique{
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+.home .overlay section .sec2{
+  width: 100%;
+  height:  87%;;
+}
+.home .overlay section .sec2 .arrow1{
+  
+  width: calc(6%);
+  height: 27%;
+  font-size: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1%;
+  margin-right: 3%;
+  position: relative;
+  margin-top: 20px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.home .overlay section .sec2 aside:hover{
+  background-color: #ec9;
+}
+.home .overlay section .sec2 aside{
+  transform: rotate(-47deg);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  border: 1px solid white;
+  justify-content: center;
+  transition: 0.4s;
+}
+.home .overlay section .sec2 .arrow2{
+  width: calc(6%);
+  height: 27%;
+  font-size: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+
+  margin-right: 6%;
+  margin-top: 20px;
+  transition: 0.4s;
+}
+
+.home .overlay section .sec2 .content{
+  transform: rotate(47deg);
+  margin-right: 5px;
+}
+.home .overlay section .sec2 .text{
+  width: calc(100% - 22%);
+  height: 100%;
+  font-size: 20px;
+  text-transform: capitalize;
+  display: grid;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.home .overlay section .sec2 .text .btn{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.home .overlay section .sec2 .text .main {
+  width: 48%;
+  height: 61%;
+  background-color: #ec9;
+  color: black;
+  letter-spacing: 3px;
+  border: 1px solid #ec9;
+  transition: 0.5s linear;
+  position: relative;
+  cursor: pointer;
+  border-radius: 8px;
+  text-align: center;
+  padding: 2px;
+  display: grid;
+  justify-content: center;
+  align-self: center;
+  margin-top: -10px;
+}
+
+.home .overlay section .sec2 .text .main button[type=submit] {
+  width: 100%;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: transparent;
+  cursor: pointer;
+  color: black;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.home .overlay section .sec2 .text .main button[type=submit]::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  border-radius: 8px;
+}
+
+.home .overlay section .sec2 .text .main button[type=submit]:hover::before {
+  background-color: black;
+  animation: loadingWave 4s linear;
+}
+.home .overlay section .sec2 .text .main button[type=submit]:hover p{
+  width: 100%;
+  color: white;position: relative;transition: 4s;display: block;
+}
+@keyframes loadingWave {
+0% {
+    clip-path: polygon(0% 100%, 100% 100%, 99% 100%, 81% 100%, 64% 100%, 46% 100%, 29% 100%, 14% 100%, 0 100%);
+}
+
+10% {
+    clip-path: polygon(0% 100%, 100% 100%, 100% 90%, 84% 94%, 66% 95%, 47% 94%, 31% 95%, 14% 96%, 0 94%);    
+}
+
+20% {
+    clip-path: polygon(0% 100%, 100% 100%, 100% 74%, 81% 72%, 63% 72%, 44% 75%, 33% 77%, 16% 78%, 0 74%);                
+}
+
+40% {
+    clip-path: polygon(0% 100%, 100% 100%, 100% 53%, 85% 55%, 67% 58%, 44% 54%, 30% 48%, 15% 47%, 0 49%);                
+}
+
+60% {
+    clip-path: polygon(0% 100%, 100% 100%, 100% 24%, 86% 25%, 69% 29%, 53% 34%, 37% 38%, 18% 40%, 0 38%); 
+}
+
+80% {
+    clip-path: polygon(0% 100%, 100% 100%, 100% 22%, 84% 29%, 67% 31%, 45% 27%, 26% 17%, 12% 14%, 0 15%);    
+}
+
+90% {
+    clip-path: polygon(0% 100%, 100% 100%, 100% 5%, 86% 10%, 73% 10%, 55% 6%, 33% 3%, 15% 5%, 0 9%);   
+}
+
+100% {
+    clip-path: polygon(0% 100%, 100% 100%, 100% 0, 86% 0, 71% 0, 55% 0, 34% 0, 18% 0, 0 0);    
+}
+}
+
+
+
+/*______________________________________________________________*/
+
+
+.home .overlay .end{
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+.home .overlay .end .content{
+  background-color: #ec9;
+  margin-right: 8%;
+  display: grid;
+  justify-content: center;
+  font-size: 10px;
+  text-align: center;
+  color: black;
+  border: 1px solid #ec9;
+  gap: 0;
+  position: relative;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  padding: 4px;
+  width: 103px;
+  height: 93px;
+}
+.home .overlay .end .content img{
+  width: 47%;
+  margin-left: 24%;
+
+}
+.home .overlay .end .content::before{
+  content: "";
+  border: 1px solid #ec9;
+  background-color: transparent;
+  animation: spin 4s linear infinite;
+  width: 126px;
+  height: 119px;
+  position: absolute;
+  margin-top: -10px;
+  margin-left: -9px;
+
+
+}
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+} 
+
+
+/*______________________________________________________________*/
+
+
+
+
+@media (max-width: 767px) { /* Mobile & Tablet Rules */
+
+  .visible-xs {
+      display: block !important;
+  }
+  .hidden-xs {
+      display: none !important;
+  }
+  .responsive-paragraph {
+      text-align: center;
+      font-size: 20px ;
+  }
+    
+  .home .overlay header .list i{
+    justify-content: center;
+    display: grid;
+    align-items: center;
+    line-height: 3.5;
+    font-size: 24px;
+  }
+  .home .overlay header .logo{
+    width: 73%;
+  }
+  .home .overlay header .list{
+    width: 27%;
+    cursor: pointer;
+  }
+    
+  .home .overlay header{
+    display: flex;
+    justify-content: space-between;
+  }
+  .visible-list {
+    display: grid !important;
+    transform: translateX(0);
+  }
+
+  .hidden-list {
+      display: grid !important; /* Ensure it's part of the layout */
+      transform: translateX(-200%);
+  }
+
+      
+  .home .overlay section .sec2 .text .main button[type=submit] {
+  
+    font-size: 13px;
+  }
+
+  #llist{
+    z-index: 2;
+    background-color: #363434;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+
+    justify-content: center;
+    padding-top: 46px;
+    transition: transform 0.6s ease; /* Animation for sliding in */
+    
+  }
+  nav .wrong{
+    width: 100%;
+    display: flex;
+    font-size: 36px;
+    justify-content: end;
+    color: #ec9;
+    margin-right: 22%;
+    transition: 0.6s ;
+    cursor: pointer;
+
+
+  } 
+  nav .wrong:hover{
+    color: black;
+  }
+
+  nav ul{
+    width: 100%;
+    text-align: center;
+  }
+  nav ul li{
+    text-align: center;
+    position: relative;
+    transition: 0.6s ;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    text-align: center;
+  }
+  .hh{
+    margin-top: -7px;
+  }
+
+  nav .main{
+    width: 270px;
+    margin-top: 10px;
+    height: 54px;
+    background-color: #ec9;
+    margin-right: 2%;
+    color: black;
+    letter-spacing: 3px;
+    border: 1px solid #ec9;
+    transition: 0.5s linear;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  nav .main button[type=submit]{
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    color: black;
+    letter-spacing: 3px;  align-items: center;text-transform: uppercase;
+  }
+  
+  nav .main button[type=submit]::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  border-radius: 8px;
+  }
+
+  nav .main button[type=submit]:hover::before {
+    background-color: black;
+    animation: loadingWave 4s linear;
+  }
+  nav .main button[type=submit]:hover p{
+    width: 100%;
+    color: white;position: relative;transition: 4s;display: block;
+  }
+
+  nav ul li hr{
+    width: 0;
+    color: white; /* Ensure the color matches the background */
+    transition: width 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Smooth transition for width and opacity */
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  nav ul li:hover hr {
+    width: 200px; /* Expand to full width on hover */
+    opacity: 1;
+  }
+  #diffrent{
+    font-size: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+  }
+  .home .overlay section{
+    padding-left: 0;
+  }
+  .home .overlay section .sec2 .text #uni{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .home .overlay section .sec2 .text{
+    width: 100% ;
+    font-size: 16px ;
+
+    
+  }
+  .home .overlay section .sec2 {
+    padding-left: 0;
+  }
+
+  .home .overlay .end .content{
+    margin-right: 15%;
+  }
+
+
+@keyframes loadingWave {
+  0% {
+      clip-path: polygon(0% 100%, 100% 100%, 99% 100%, 81% 100%, 64% 100%, 46% 100%, 29% 100%, 14% 100%, 0 100%);
+  }
+
+  10% {
+      clip-path: polygon(0% 100%, 100% 100%, 100% 90%, 84% 94%, 66% 95%, 47% 94%, 31% 95%, 14% 96%, 0 94%);    
+  }
+
+  20% {
+      clip-path: polygon(0% 100%, 100% 100%, 100% 74%, 81% 72%, 63% 72%, 44% 75%, 33% 77%, 16% 78%, 0 74%);                
+  }
+
+  40% {
+      clip-path: polygon(0% 100%, 100% 100%, 100% 53%, 85% 55%, 67% 58%, 44% 54%, 30% 48%, 15% 47%, 0 49%);                
+  }
+
+  60% {
+      clip-path: polygon(0% 100%, 100% 100%, 100% 24%, 86% 25%, 69% 29%, 53% 34%, 37% 38%, 18% 40%, 0 38%); 
+  }
+  
+  80% {
+      clip-path: polygon(0% 100%, 100% 100%, 100% 22%, 84% 29%, 67% 31%, 45% 27%, 26% 17%, 12% 14%, 0 15%);    
+  }
+
+  90% {
+      clip-path: polygon(0% 100%, 100% 100%, 100% 5%, 86% 10%, 73% 10%, 55% 6%, 33% 3%, 15% 5%, 0 9%);   
+  }
+
+  100% {
+      clip-path: polygon(0% 100%, 100% 100%, 100% 0, 86% 0, 71% 0, 55% 0, 34% 0, 18% 0, 0 0);    
+  }
+
+
+}
+
+}
+
+
+
+/*========================================== top ===========================================================*/
+
+.top{
+  width: 100%;
+  margin-top: 40px;
+  height: 867px;
+}
+.top .overlay{
+  height: 867px;
+
+}
+.top .overlay .intro{
+  color: white;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+.top .overlay .intro .uni{
+  letter-spacing: 2px;
+}
+.top .overlay .intro h1{
+  font-size: 40px;
+  text-transform: capitalize;
+}
+
+
+/*-------------------------------------------------------------------------------------------------------*/
+
+.top .overlay section{
+  width: 100%;
+  color: white;
+  padding-top: 35px;
+  position: relative;
+
+}
+.top .overlay section .dishs .plat .uni{
+  font-size: 12px;
+  font-weight: 405;
+  text-transform: capitalize;
+  line-height: normal;
+  margin-bottom: 76px;
+  line-height: normal;
+}
+
+
+.top .overlay section .dishs{
+  width: 100%;
+  text-align: center;
+  margin-left: 7%;
+
+}
+.top .overlay section .dishs .plat{
+  height: 100%;
+  margin-right: 2%;
+  width: calc(100% / 3 - 6%);
+}
+
+.top .overlay section .dishs .plat .imges{
+  position: relative;
+  overflow: hidden;
+}
+
+
+.top .overlay section .dishs .plat .imges::before {
+  content: "";
+  position: absolute;
+  top: -48px;
+  left: -180%;
+  background-color: #ffffff82;
+  width: 10%;
+  transform: rotate(45deg);
+  height: 184%;
+  box-shadow: 0px 0px 40px 31px #ffffff82;
+  transition: none; 
+  
+}
+
+.top .overlay section .dishs .plat:hover .imges::before {
+  animation: slide-in 1s forwards; 
+}
+
+@keyframes slide-in {
+  from {
+    left: -180%;
+  }
+  to {
+    left: 180%;
+  }
+}
+
+
+
+
+
+
+
+
+.top .overlay section .dishs .plat img{
+  width: 217px;
+  position: relative;
+  z-index: -1;
+}
+
+
+.top .overlay section .dishs .plat .unin{
+  width: 117px;
+  position: absolute;
+  height: 372px;
+  margin-top: -26px;
+  z-index: -1;
+  margin-left: -60px;
+  /* margin-left: 45px; */
+  transition: 0.8s;
+  transform: rotate3d(0,1,0,0);
+}
+
+.top .overlay section .dishs .plat:hover .unin{
+  transform: rotate3d(0,1,0,180deg);
+}
+
+
+
+
+.top .overlay section .dishs .plat h2{
+  font-size: 30px;
+  text-align: center;
+  text-transform: capitalize;
+}
+.top .overlay section .dishs .plat hr{
+  width: 0;
+  color: white; /* Ensure the color matches the background */
+  transition: width 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Smooth transition for width and opacity */
+  opacity: 0;
+  
+}.top .overlay section .dishs .plat .in {
+  margin-bottom: 0;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.top .overlay section .dishs .plat .in:hover + hr,
+.top .overlay section .dishs .plat .in:hover + hr + hr {
+  width: 60px;
+  opacity: 1;
+}
+.top .overlay .end{
+  position: relative;
+  padding-top: 50px;
+  display: grid;
+  align-items: center;
+  justify-content: end;
+  font-size: 28px;
+}
+
+.top .overlay .end  i{
+  font-size: 21px;
+  background-color: #e4a1a1;
+  padding: 11px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.6s;
+  display: grid;
+  justify-content: center;
+}
+.top .overlay .end  i:hover{
+  color: black;
+}
+.top .overlay .end  a{
+  text-decoration: none;
+  color: white;
+}
+
+/*---------------------------------------------------- nmoble screen ----------------------------------------------*/
+
+
+
+
+@media (max-width: 767px) {
+
+  .visible-xs {
+      display: block !important
+  }
+  .hidden-xs {
+      display: none !important
+  }
+  .responsive-paragraph {
+      text-align: center;
+      font-size: 20px !important
+  }
+
+    
+  .top{
+    width: 100%;
+    margin-top: 40px;
+    height: 1940px;
+  }
+  .top .overlay{
+    height: 1940px;
+  }
+    
+  .top .overlay section{
+    width: 100%;
+    display: grid;
+    color: white;
+  
+    padding-top: 0;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+  }
+  
+    
+  .top .overlay .intro .uni{
+    margin-left: 0;
+  }
+  .top .overlay .intro h1{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 0;
+  }
+
+
+  .top .overlay section .dishs{
+    margin-left: 0;
+    display: grid;
+    margin-top: 5%;
+  }
+  .top .overlay section .dishs .plat .uni{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .top .overlay section .dishs .plat{
+    margin-top: 0 !important;
+    margin-right: 0 !important;
+    width: 100%;
+    margin-bottom: 16%;
+  }
+  
+
+  
+
+  
+}
+
+/* Disable hover effects on mobile screens */
+@media (hover: none) and (pointer: coarse) {
+  
+  
+  
+.top .overlay section .dishs .plat:hover .imges::before {
+  animation:none; 
+}
+}
+/*================================================= story ===========================================*/
+
+
+.story{
+  width: 100%;
+  height: 700px;
+  margin-top: 110px;
+}
+
+.story .overlay{
+  color: white;
+  text-transform: capitalize;
+  height: 700px;
+}
+/*---------------------------------------------------------------------------*/
+.story .overlay .collect{
+  width: 100%;
+  height: 524px;
+}
+.story .overlay .collect .sec1{
+  width: 36%;
+  height: 100%;
+  margin-right: 15%;
+}
+.story .overlay .collect .sec1 .text h5{
+  font-size: 12px;
+  letter-spacing: 3px;
+}
+
+
+.story .overlay .collect .sec1 .text h1{
+  font-size: 35px;
+}
+.story .overlay .collect .sec1 .text p{
+  font-size: 11px;
+}
+/*======================================*/
+
+.story .overlay .collect .sec1 .book h5{
+  font-size: 13px;
+}
+.story .overlay .collect .sec1 .book p{
+  font-size: 17px;
+}
+/*=======================================*/
+
+.story .overlay .collect .sec1 .btn{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: 61px;
+}
+.story .overlay .collect .sec1 .btn .main{
+  width: 48%;
+  height: 61%;
+  background-color: #ec9;
+  color: black;
+  letter-spacing: 3px;
+  border: 1px solid #ec9;
+  transition: 0.5s linear;
+  position: relative;
+  cursor: pointer;
+  border-radius: 8px;
+  text-align: center;
+  padding: 2px;
+  display: grid;
+  justify-content: center;
+  align-self: center;
+}
+.story .overlay .collect .sec1 .btn .main button[type=submit] {
+
+  width: 100%;
+  font-size: 13px;
+  border: none;
+  border-radius: 8px;
+  background-color: transparent;
+  cursor: pointer;
+  color: black;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.story .overlay .collect .sec1 .btn .main button[type=submit]::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  border-radius: 8px;
+}
+
+.story .overlay .collect .sec1 .btn .main button[type=submit]:hover::before {
+  background-color: black;
+  animation: loadingWave 4s linear;
+}
+.story .overlay .collect .sec1 .btn .main button[type=submit]:hover p{
+  width: 100%;
+  color: white;position: relative;transition: 4s;display: block;
+}
+
+/*---------------------------------------------------------------------------------*/
+.story .overlay .collect .sec2{
+  width: 49%;
+  background-image: url("../photos/Interior\ Design\ \,\ Rustic\ Modern\ Restaurant\ -\ 02.png");
+  background-position: center;
+  background-size: cover;
+  height: 75%;
+  position: relative;
+}
+
+.story .overlay .collect .sec2 .image{
+  position: absolute;
+  right: 73%;
+  top: 47%;
+  z-index: 0;
+}
+
+.story .overlay .collect .sec2 .image img{
+  width: 200px;
+  z-index: -2;
+ 
+
+}
+.story .overlay .collect .sec2 .image .tranback{
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.story .overlay .collect .sec2 .image .tranback::before {
+  content: "";
+  position: absolute;
+  top: -48px;
+  left: -180%;
+  background-color: #ffffff82;
+  width: 10%;
+  transform: rotate(45deg);
+  height: 184%;
+  box-shadow: 0px 0px 10px 31px #ffffff82;
+  transition: none; /* Ensure no reverse transition on hover out */
+  z-index: -1; /* Ensure pseudo-element is on top of the image */
+}
+
+.story .overlay .collect .sec2 .image .tranback:hover::before {
+  animation: slide-in 0.6s forwards; /* Trigger the animation on hover */
+}
+
+@keyframes slide-in {
+  from {
+    left: -180%;
+  }
+  to {
+    left: 180%;
+  }
+}
+
+
+
+
+.textContainer {
+  position: relative;
+ 
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.textContainer p {
+  position: absolute;
+  text-align: center;
+  font-size: 25px;
+  background-color: black;
+  padding: 29px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.textContainer span {
+  position: absolute;
+  font-size: 18px;
+  white-space: nowrap;
+  transform: translate(-50%, -50%) rotate(calc(15deg * var(--i)))
+    translateY(calc(-1em / sin(15deg)));
+  transform-origin: center;
+  text-indent: calc(var(--i) * -1em);
+  overflow: hidden;
+  width: 1em;
+  display: inline-block;
+  animation: rotateCircle 20s linear infinite; /* Animation added */
+  letter-spacing: 5px;
+}
+@keyframes rotateCircle {
+  0% {
+    transform: rotate(calc(15deg * var(--i))) translateY(calc(-1em / sin(15deg)));
+  }
+  100% {
+    transform: rotate(calc(15deg * var(--i) + 360deg)) translateY(calc(-1em / sin(15deg)));
+  }
+}
+
+/*-----------------------------------------------------------------------------------*/
+
+.story .overlay .end{
+  position: relative;
+  padding-top: 50px;
+  display: grid;
+  align-items: center;
+  justify-content: end;
+  font-size: 28px;
+}
+
+.story .overlay .end  i{
+  font-size: 21px;
+  background-color: #e4a1a1;
+  padding: 11px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.6s;
+  display: grid;
+  justify-content: center;
+}
+.story .overlay .end  i:hover{
+  color: black;
+}
+.story .overlay .end  a{
+  text-decoration: none;
+  color: white;
+}
+
+/*------------------------------------------------- mobile screen--------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 767px) {
+
+  .visible-xs {
+      display: block !important
+  }
+  .hidden-xs {
+      display: none !important
+  }
+  .responsive-paragraph {
+      text-align: center;
+      font-size: 20px !important
+  }
+    
+  .story{
+    width: 100%;
+    height: 870px;
+    margin-top: 110px;
+  }
+
+  .story .overlay{
+    color: white;
+    text-transform: capitalize;
+    height: 700px;
+  }
+  /*---------------------------------------------------------------------------*/
+  .story .overlay .collect{
+    width: 100%;
+    height: auto;
+  }
+  
+  .story .overlay .collect .sec1{
+    width: 100%;
+    height: 100%;
+    margin-right: 0;
+  }
+  .story .overlay .collect .sec2{
+    width: 100%;
+    height: 100%;
+    margin-right: 0;
+  }
+  
+.story .overlay .collect .sec1 .text h1{
+  font-size: 53px;
+}
+.story .overlay .collect .sec1 .text p{
+  font-size: 12px;
+}
+
+.story .overlay .collect .sec1 .btn .main{
+  width: 100%;
+  
+}
+  
+}
+
+
+/*===================================================================================================================*/
+
+
+.special{
+  width: 100%;
+  height: 660px;
+  position: relative;
+  overflow: hidden;
+}
+.special .overlay{
+  height: 660px;
+}
+
+.special::before{
+  background-image: url("../photos/LUCA RESTAURANT - A GOOD BRUNCH(1).jpg");
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 50%;
+  height: 80%;
+  z-index: -1;
+  content: "";
+
+}
+
+
+
+
+.special .overlay .collection{
+  width: 100%;
+  height: 565px;
+}
+
+.special .overlay .sec1{
+  width: 50%;
+  background-image: none;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  color: transparent;
+
+}
+
+
+.special .overlay .sec2{
+  color: white;
+  text-transform: capitalize;
+  height: 100%;
+  width: 42%;
+  margin: 0;
+  padding-left: 12px;
+  padding-right: 0;
+}
+
+.special .overlay .sec2 .collect{
+  display: grid;
+  justify-content: center;
+  width: 100%;
+  height: 92%;
+}
+.special .overlay .sec2 .text {
+  font-size: 14px;
+}
+
+.special .overlay .sec2 .btn{
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+.special .overlay .sec2 .btn .main{
+  width: 65%;
+  height: 39%;
+  background-color: #ec9;
+  color: black;
+  letter-spacing: 3px;
+  border: 1px solid #ec9;
+  transition: 0.5s linear;
+  position: relative;
+  cursor: pointer;
+  border-radius: 8px;
+  text-align: center;
+  padding: 2px;
+  display: grid;
+  justify-content: center;
+  align-self: center;
+}
+.special .overlay .sec2 .btn .main button[type=submit] {
+
+  width: 100%;
+  font-size: 13px;
+  border: none;
+  border-radius: 8px;
+  background-color: transparent;
+  cursor: pointer;
+  color: black;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.special .overlay .sec2 .btn .main button[type=submit]::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  border-radius: 8px;
+}
+
+.special .overlay .sec2 .btn .main button[type=submit]:hover::before {
+  background-color: black;
+  animation: loadingWave 4s linear;
+}
+.special .overlay .sec2 .btn .main button[type=submit]:hover p{
+  width: 100%;
+  color: white;position: relative;transition: 4s;display: block;
+}
+
+
+
+
+.special .overlay .end{
+  position: relative;
+  display: grid;
+  align-items: center;
+  justify-content: end;
+  font-size: 28px;
+  
+}
+
+.special .overlay .end  i{
+  font-size: 21px;
+  background-color: #e4a1a1;
+  padding: 11px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.6s;
+  display: grid;
+  justify-content: center;
+}
+.special .overlay  .end  i:hover{
+  color: black;
+}
+.special .overlay .end  a{
+  text-decoration: none;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 767px) {
+
+  .visible-xs {
+      display: block !important
+  }
+  .hidden-xs {
+      display: none !important
+  }
+  .responsive-paragraph {
+      text-align: center;
+      font-size: 20px !important
+  }
+    
+  .special{
+    width: 100%;
+    height: 1083px;
+  }
+  .special .overlay{
+    height: 1083px;
+    height: 925px;
+    display: grid;
+  }
+
+  .special .overlay .sec1{
+    width: 100%;
+    height: 365px;
+  
+  }
+  
+  .special .overlay .collection {
+    width: 100%;
+    height: 98%;
+  }
+
+  .special .overlay .sec2{
+    display: block;
+    width: 100%;
+    height: 61%;
+    text-align: center;
+    padding-left: 0px;
+  }
+  .special .overlay .sec2 .collect{
+    display: grid;
+    justify-content: center;
+    width: 100%;
+    height: 92%;
+  }
+  .special .overlay .sec2 .end{
+    margin-right: 19px;
+  }
+  .special .overlay .sec2 .btn .main{
+    height: 62%;
+    width: 100%;
+  }
+  
+.special::before{
+  background-image:none;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 50%;
+  height: 80%;
+  z-index: -1;
+  content: "";
+
+}
+
+
+.special .overlay .sec1{
+  
+  background-image: url("../photos/LUCA RESTAURANT - A GOOD BRUNCH(1).jpg");
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------*/
+
+.menu{
+  width: 100%;
+  height: 940px;
+  margin-top: 10%;
+}
+.menu .overlay{
+  height: 940px;
+}
+/*----------------------------------------------------------------------------------------------*/
+
+.menu .overlay .topp{
+  color: white;
+  text-transform: capitalize;
+  width: 100%;
+  height: 115px;
+}
+
+.menu .overlay .topp p{
+  letter-spacing: 2px;
+  font-size: 12px;
+  font-weight: 456;
+}
+.menu .overlay .topp h1{
+  font-size: 41px;
+}
+/*----------------------------------------------------------------------------------------------*/
+
+.menu .overlay .between {
+  width: 100%;
+  height: 600px;
+}
+.menu .overlay .between section{
+  width: 49%;
+  display: grid;
+  height: 100%;
+}
+.menu .overlay .between .line{
+  width: 1%;
+  border-left: 1px solid white;
+  color: transparent;
+  height: 100%;
+}
+.menu .overlay .between section .dish{
+  width: 100%;
+  margin-bottom: 3%;
+  height: 172px;
+  position: relative;
+  overflow: hidden;
+}
+.menu .overlay .between section .dish .text .part h3{
+  width: fit-content;
+  font-size: 15px;
+  margin-right: 5%;
+  margin-top: 5%;
+}
+
+.menu .overlay .between section .dish .text .part .hr{
+  width: 30%;
+  margin-right: 2%;
+  margin-top: 5%;
+  height: 35%;
+  color: white;
+  
+}
+.menu .overlay .between section .dish .text .part .copy{
+  width: fit-content;
+  margin-right: 0;
+}
+
+.menu .overlay .between section .dish .img img {
+  border-radius: 29px;
+  width: 100%;
+  transform: scale(1);
+  transition: transform 0.2s; /* Correct the spelling of 'transform' */
+  z-index: -1;
+  position: relative;
+}
+
+.menu .overlay .between section .dish .img {
+  border-radius: 29px;
+  width: 22%;
+  margin-right: 2%;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.menu .overlay .between section .dish .img:hover img {
+  transform: scale(1.2); /* Scale the image on hover */
+}
+
+.menu .overlay .between section .dish .img::before {
+  content: "";
+  position: absolute;
+  top: -48px;
+  left: -180%;
+  background-color: #ffffff82;
+  width: 10%;
+  transform: rotate(45deg);
+  height: 184%;
+  box-shadow: 0px 0px 10px 31px #ffffff82;
+  transition: none; /* Remove transition */
+  
+}
+
+.menu .overlay .between section .dish .img:hover::before {
+  animation: slide-in 0.6s forwards; /* Start the animation on hover */
+}
+
+@keyframes slide-in {
+  from {
+    left: -180%;
+  }
+  to {
+    left: 180%;
+  }
+}
+
+
+
+
+
+
+.menu .overlay .between section .dish .text{
+  width: 75%;
+  color: white;
+  text-align: initial;
+  margin-right: 1%;
+  height: 100%;
+}
+.menu .overlay .between section .dish .text .part{
+  width: 100%;
+  text-transform: capitalize;
+  height: 25%;
+  position: relative;
+  overflow: hidden;
+}
+.menu .overlay .between section .dish .text .part .unih3{
+  font-size: 15px;
+  margin-right: 1%;
+  width: fit-content;
+  margin-top: 5%;
+}
+.menu .overlay .between section .dish .text .part .new{
+  background: pink;
+  width: 29%;
+  margin-right: 1%;
+  margin-top: 5%;
+  height: 35%;
+  font-size: 15px;
+  text-align: center;
+  padding-bottom: 1%;
+ 
+}
+.menu .overlay .between section .dish .text .part .unihr{
+  width: 15%;
+  margin-right: 1%;
+  margin-top: 5%;
+  height: 35%;
+  color: white;
+}
+
+.menu .overlay .between section .dish .text p{
+  font-size: 15px;
+  margin-top: 1%;
+}
+
+
+
+
+
+
+
+/*--------------------------------------------------------------*/
+.menu .overlay .bottom{
+  height: 113px;
+  width: 100%;
+}
+.menu .overlay .bottom p{
+  color: white;
+  font-size: 17px;
+  text-transform: capitalize;
+}
+
+
+.menu .overlay .bottom .btn{
+  width: 100%;
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+.menu .overlay .bottom .btn .main{
+  width: 24%;
+  height: 39%;
+  background-color: #ec9;
+  color: black;
+  letter-spacing: 3px;
+  border: 1px solid #ec9;
+  transition: 0.5s linear;
+  position: relative;
+  cursor: pointer;
+  border-radius: 8px;
+  text-align: center;
+  padding: 2px;
+  display: grid;
+  justify-content: center;
+  align-self: center;
+}
+.menu .overlay .bottom .btn .main button[type=submit] {
+
+  width: 100%;
+  font-size: 13px;
+  border: none;
+  border-radius: 8px;
+  background-color: transparent;
+  cursor: pointer;
+  color: black;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.menu .overlay .bottom .btn .main button[type=submit]::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  border-radius: 8px;
+}
+
+.menu .overlay .bottom .btn .main button[type=submit]:hover::before {
+  background-color: black;
+  animation: loadingWave 4s linear;
+}
+.menu .overlay .bottom .btn .main button[type=submit]:hover p{
+  width: 100%;
+  color: white;position: relative;transition: 4s;display: block;
+}
+
+/*-----------------------------------------------------------------------*/
+.menu .overlay .end{
+  height: 80px;
+  width: 100%;
+  position: relative;
+  display: grid;
+  align-items: center;
+  justify-content: end;
+  font-size: 28px;
+ 
+
+}
+
+
+
+.menu .overlay .end  i{
+  font-size: 21px;
+  background-color: #e4a1a1;
+  padding: 11px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.6s;
+  display: grid;
+  justify-content: center;
+}
+.menu .overlay .end  i:hover{
+  color: black;
+}
+.menu .overlay .end  a{
+  text-decoration: none;
+  color: white;
+}
+
+
+
+
+
+/*------------------------------------ mobile screen -----------------------*/
+
+
+
+
+
+@media (max-width: 767px) {
+
+  .visible-xs {
+      display: block !important
+  }
+  .hidden-xs {
+      display: none !important
+  }
+  .responsive-paragraph {
+      text-align: center;
+      font-size: 20px !important
+  }
+
+  .menu{
+    width: 100%;
+    height: 3264px;
+    margin-top: 10%;
+  }
+  .menu .overlay{
+    height: 3264px;
+  }
+  /*----------------------------------------------------------------------------------------------*/
+  
+  .menu .overlay .topp{
+    color: white;
+    text-transform: capitalize;
+    width: 100%;
+    height: 115px;
+    margin-bottom: 20%;
+  }
+  
+  .menu .overlay .topp p{
+    letter-spacing: 2px;
+    font-size: 12px;
+    font-weight: 456;
+  }
+  .menu .overlay .topp h1{
+    font-size: 41px;
+  }
+  /*----------------------------------------------------------------------------------------------*/
+  
+  .menu .overlay .between {
+    float: none;
+    display: grid;
+    justify-content: center;
+    height: 2758px;
+  }
+  .menu .overlay .between section{
+    width: 100%;
+    display: grid;
+    height: 100%;
+    justify-content: center;
+  }
+  .menu .overlay .between .line{
+    width: 1%;
+    border-left: 1px solid white;
+    color: transparent;
+    height: 100%;
+  }
+  .menu .overlay .between section .dish{
+    width: 100%;
+    margin-bottom: 3%;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    height: 100%;
+    justify-content: center;
+  }
+  .menu .overlay .between section .dish .text .part h3{
+    width: fit-content;
+    font-size: 15px;
+    margin-right: 0%;
+    margin-top: 5%;
+  }
+  
+  .menu .overlay .between section .dish .text .part .hr{
+    width: 30%;
+    margin-right: 0%;
+    margin-top: 5%;
+    height: 35%;
+    color: white;
+    
+  }
+  .menu .overlay .between section .dish .text .part .copy{
+    width: fit-content;
+    margin-right: 0;
+  }
+  
+  .menu .overlay .between section .dish .img{
+
+    width: 100%;
+    margin-right: 0%;
+    display: flex;
+    justify-content: center;
+  }
+  .menu .overlay .between section .dish .img img{
+    border-radius: 29px;
+    width: 300px;
+    margin-right: 2%;
+  }
+  
+  
+  .menu .overlay .between section .dish .text{
+    width: 100%;
+    color: white;
+    text-align: center;
+    margin-right: 1%;
+    height: 100%;
+    display: grid;
+    justify-content: center;
+  }
+  .menu .overlay .between section .dish .text .part{
+    width: 100%;
+    text-transform: capitalize;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+  }
+  .menu .overlay .between section .dish .text .part .unih3{
+    font-size: 15px;
+    margin-right: 0%;
+    width: fit-content;
+    margin-top: 5%;
+  }
+  .menu .overlay .between section .dish .text .part .new{
+    background: pink;
+    width: 29%;
+    margin-right: 0%;
+    margin-top: 5%;
+    height: 35%;
+    font-size: 15px;
+    text-align: center;
+    padding-bottom: 1%;
+   
+  }
+  .menu .overlay .between section .dish .text .part .unihr{
+    width: 15%;
+    margin-right: 0%;
+    margin-top: 5%;
+    height: 35%;
+    color: white;
+  }
+  
+  .menu .overlay .between section .dish .text p{
+    font-size: 15px;
+    margin-top: 1%;
+  }
+  
+  
+  
+  
+  
+  
+  
+  /*--------------------------------------------------------------*/
+  .menu .overlay .bottom{
+    height: 113px;
+    width: 100%;
+  }
+  .menu .overlay .bottom p{
+    color: white;
+    font-size: 17px;
+    text-transform: capitalize;
+  }
+  
+  
+  .menu .overlay .bottom .btn{
+    width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+  }
+  .menu .overlay .bottom .btn .main{
+    width: 181px;
+    height: 39%;
+    background-color: #ec9;
+    color: black;
+    letter-spacing: 3px;
+    border: 1px solid #ec9;
+    transition: 0.5s linear;
+    position: relative;
+    cursor: pointer;
+    border-radius: 8px;
+    text-align: center;
+    padding: 2px;
+    display: grid;
+    justify-content: center;
+    align-self: center;
+  }
+  .menu .overlay .bottom .btn .main button[type=submit] {
+  
+    width: 100%;
+    font-size: 13px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+    cursor: pointer;
+    color: black;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+  
+  .menu .overlay .bottom .btn .main button[type=submit]::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    border-radius: 8px;
+  }
+  
+  .menu .overlay .bottom .btn .main button[type=submit]:hover::before {
+    background-color: black;
+    animation: loadingWave 4s linear;
+  }
+  .menu .overlay .bottom .btn .main button[type=submit]:hover p{
+    width: 100%;
+    color: white;position: relative;transition: 4s;display: block;
+  }
+  
+  /*-----------------------------------------------------------------------*/
+  .menu .overlay .end{
+    height: 80px;
+    width: 100%;
+    position: relative;
+    display: grid;
+    align-items: center;
+    justify-content: end;
+    font-size: 28px;
+   
+  
+  }
+  
+  
+  
+  .menu .overlay .end  i{
+    font-size: 21px;
+    background-color: #e4a1a1;
+    padding: 11px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.6s;
+    display: grid;
+  justify-content: center;
+  }
+  .menu .overlay .end  i:hover{
+    color: black;
+  }
+  .menu .overlay .end  a{
+    text-decoration: none;
+    color: white;
+  }
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+}
+
+/*===================================================================================================================*/
+
+
+
+.contact{
+  width: 100%;
+  position: relative;
+  height: 1180px;
+  background-color: #0000003b;
+}
+.contact .overlay{
+  height: 1180px;
+}
+
+
+.contact::before{
+  background-image: url('../photos/every.png');
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 50%;
+  content: "";
+  z-index: -1;
+
+
+}
+
+/*------------------------------------------------*/
+.contact .overlay .collect{
+  display: grid;
+  align-items: center;
+}
+.contact .overlay .content{
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-transform: capitalize;
+}
+
+.contact .overlay .content h2{
+  font-size: 30px;
+}
+
+
+.contact .overlay .content .circle img{
+  width: 60px;
+}
+/*------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+.contact .overlay .content .reserve{
+  width: 100%;
+  background-color: #a99292;
+  height: 65%;
+  margin-top: 11%;
+
+}
+
+.contact .overlay .content .reserve .sec1{
+  width: 58%;
+  margin-right: 6%;
+  margin-left: 6%;
+  height: 100%;
+}
+
+
+.contact .overlay .content .reserve .sec1 .res2{
+  width: 100%;
+  height: 30%;
+}
+.contact .overlay .content .reserve .sec1 .res2 h1{
+ 
+  font-size: 45px;
+}
+.contact .overlay .content .reserve .sec1 .res2 p{
+  font-size: 12px;
+}
+
+
+.contact .overlay .content .reserve .sec1 .res{
+  width: 100%;
+  height: 62%;
+  
+}
+
+.contact .overlay .content .reserve .sec1 .res form{
+  height: 100%;
+}
+
+.contact .overlay .content .reserve .sec1 .res form .part{
+  display: grid;
+  grid-template-columns: repeat(2,calc(89% / 2));
+  justify-content: center;
+  gap: 10%;
+  font-size: 12px;
+  margin-bottom: 2%;
+}
+
+
+.contact .overlay .content .reserve .sec1 .res form .part input{
+  padding: 3%;
+  text-transform: capitalize;
+  color: white;
+  background-color: #363434;
+  border: 1px solid white;
+}
+
+
+.contact .overlay .content .reserve .sec1 .res form .part2 {
+  display: grid;
+  grid-template-columns: repeat(3,calc(97% / 3));
+  justify-content: center;
+  gap: 1%;
+  font-size: 13px;
+  margin-bottom: 2%;
+
+}
+
+.contact .overlay .content .reserve .sec1 .res form .part2 .select-container {
+  color: white;
+  background-color: #363434;
+  border: 1px solid white;
+  display: grid;
+  border-radius: 2px;
+  padding: 3%;
+  grid-template-columns: repeat(2,auto);
+}
+
+
+.contact .overlay .content .reserve .sec1 .res form .part2 .select-container i{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact .overlay .content .reserve .sec1 .res form .part2 .select-container select{
+  background-color: #363434;
+  border: 1px;
+  color: white;
+  width: 100%;
+}
+
+.contact .overlay .content .reserve .sec1 .res form .part3{
+  width: 100%;
+  display: grid;
+  height: 70%;
+  gap: 5%;
+}
+
+.contact .overlay .content .reserve .sec1 .res form .part3 input{
+  height: 100%;
+  text-transform: capitalize;
+  padding-left: 2%;
+  font-size: 13px;
+  color: white;
+  background-color: #363434;
+  border: 1px solid white;
+}
+
+
+
+/*------------------------------------*/
+
+.contact .overlay .content .reserve .sec2{
+  width: 30%;
+  height: 100%;
+  background-image: url("../photos/vecteezy_square-pattern_1209782.png");
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  text-transform: capitalize;
+}
+
+
+.contact .overlay .content .reserve .sec2 .phone h1{
+  font-size: 35px;
+}
+
+.contact .overlay .content .reserve .sec2 .phone p{
+  font-size: 15px;
+}
+
+.contact .overlay .content .reserve .sec2 .phone h2{
+  font-size: 22px;
+}
+.contact .overlay .content .reserve .sec2 .phone h5{
+  font-size: 20px;
+}
+
+/*------------------------------------------------*/
+
+
+.contact .overlay  .end{
+  height: 80px;
+  width: 100%;
+  position: relative;
+  display: grid;
+  align-items: center;
+  justify-content: end;
+  font-size: 28px;
+  margin-top: 5%;
+
+}
+
+
+
+.contact .overlay  .end  i{
+  font-size: 21px;
+  background-color: #e4a1a1;
+  padding: 11px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.6s;
+  display: grid;
+  justify-content: center;
+}
+.contact .overlay  .end  i:hover{
+  color: black;
+}
+.contact .overlay .end  a{
+  text-decoration: none;
+  color: white;
+}
+
+
+/*============================================ mobile screen ===================================================*/
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 767px) {
+
+  .visible-xs {
+      display: block !important
+  }
+  .hidden-xs {
+      display: none !important
+  }
+  .responsive-paragraph {
+      text-align: center;
+      font-size: 20px !important
+  }
+  .contact{
+    height: 2694px;
+  }
+  .contact .overlay {
+    height: 2661px;
+  }
+  .contact .overlay .collect{
+    height: 90%;
+  }
+  .contact .overlay .content .reserve {
+    float: none;
+    display: grid;
+    height: 84%;
+  }
+  .contact .overlay .content .reserve .sec1 .res2 {
+    width: 100%;
+    height: 25%;
+  }
+  .contact .overlay .content .reserve .sec1 .res form .part {
+    grid-template-columns: repeat(1,90%);
+    margin-bottom: 5%;
+  }
+  .contact .overlay .content .reserve .sec1 .res form .part2{
+    grid-template-columns: repeat(1,90%);
+    gap: 7%;
+    margin-bottom: 7%;
+  }
+  .contact .overlay .content .reserve .sec1 .res form .part3{
+    grid-template-columns: repeat(1,90%);
+    justify-content: center;
+  }
+
+
+  .contact .overlay .content .reserve .sec1{
+    float: none;
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .contact .overlay .content .reserve .sec2{
+    float: none;
+    width: 100%;
+  }
+
+  .contact .overlay .content .reserve .sec1 .res form .part2 .select-container i{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .contact .overlay  .end{
+    margin-top: 18%;
+  }
+
+
+}
+
+
+/*===========================================================================================================================*/
+.choose{
+  width: 100%;height: 500px;
+  margin-top:10%;
+}
+.choose .overlay{
+  height: 400px;
+  color: white;
+  text-transform: capitalize;
+}
+/*---------------------------------*/
+.choose .overlay .sec1{
+  width: 100%;
+  height: 36%;
+}
+.choose .overlay .sec1 p{
+  font-size: 15px;
+  letter-spacing: 3px;
+}
+.choose .overlay .sec1 h1{
+  font-size: 50px;
+}
+/*-----------------------------------*/
+.choose .overlay .sec2{
+  height: 55%;
+  width: 100%;
+}
+.choose .overlay .sec2 .part{
+  width: calc(100% / 4 - 4%);
+  background-color: #2a2828;
+  padding: 1%;
+  margin-right: 2%;
+  cursor: pointer;
+  height: 88%;
+  display: grid;
+  align-items: center;
+}
+.choose .overlay .sec2 .part .icon {
+  transition: transform 0.6s ease-in-out; /* Smooth transition */
+  transform: rotate(0) scale(1); /* Initial state */
+}
+
+.choose .overlay .sec2 .part:hover .icon {
+  animation: scaleAndRotate 0.6s ease-in-out; /* Apply the animation on hover */
+
+
+}
+
+@keyframes scaleAndRotate {
+  0% {
+    transform: rotate(0) scale(1); /* Start at full size, no rotation */
+  }
+  50% {
+    transform: rotate(360deg) scale(0.5); /* Halfway: scale down to 0.5 and rotate halfway */
+  }
+  100% {
+    transform: rotate(360deg) scale(1); /* End: back to full size and complete rotation */
+  }
+}
+.choose .overlay .sec2 .part h2{
+  font-size: 18px;
+}
+.choose .overlay .sec2 .part p{
+  font-size: 11px;
+}
+.choose .overlay .sec2 .part .icon img{
+  width: 30%;
+}
+/*---------------------------------------------------------*/
+
+.choose .overlay  .end{
+  height: 14%;
+  width: 100%;
+  position: relative;
+  display: grid;
+  align-items: center;
+  justify-content: end;
+  font-size: 28px;
+  margin-top: 5%;
+
+}
+
+
+
+.choose .overlay  .end  i{
+  font-size: 21px;
+  background-color: #e4a1a1;
+  padding: 11px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.6s;
+  display: grid;
+  justify-content: center;
+}
+.choose .overlay .end  i:hover{
+  color: black;
+}
+.choose .overlay .end  a{
+  text-decoration: none;
+  color: white;
+}
+
+/*--------------------------------------------- mobile screen -------------------------------------------*/
+
+
+
+@media (max-width: 767px) {
+
+  .visible-xs {
+      display: block !important
+  }
+  .hidden-xs {
+      display: none !important
+  }
+  .responsive-paragraph {
+      text-align: center;
+      font-size: 20px !important
+  }
+  .choose{
+    height: 1442px;
+  }
+  .choose .overlay{
+    
+    height: 1442px;
+  }
+  .choose .overlay .sec1{
+    height: auto;
+  }
+  .choose .overlay .sec2{
+    display: grid;
+    justify-content: center;
+    height: 1054px;
+  }
+  .choose .overlay .sec2 .part{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  
+.choose .overlay .sec2 .part .icon img{
+  width: 20%;
+}
+}
+
+/*===============================================================================================================*/
+
+
+.event{
+  width: 100%;
+  margin-top: 5%;
+  color: white;
+  text-transform: capitalize;
+  height: 884px;
+}
+/*--------------------------------------------------*/
+.event .overlay .sec1{
+  height: 200px;
+}
+.event .overlay .sec1 p{
+  font-size: 15px;
+  letter-spacing: 5px;
+}
+.event .overlay .sec1 h1{
+  font-size: 40px;
+}
+
+/*--------------------------------------------------*/
+.event .overlay .sec2 {
+  width: 100%;
+  height: 400px;
+}
+
+.event .overlay .sec2 .part {
+  width: calc(100% / 3 - 2%);
+  margin-right: 2%;
+  position: relative; /* Relative positioning for the pseudo-element */
+  overflow: hidden; /* Hide overflow to maintain the zoom effect */
+  height: 100%;
+}
+
+.event .overlay .sec2 .part::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: transform 0.3s ease-in-out; /* Smooth transition for scaling */
+  z-index: -1; /* Send the pseudo-element behind the content */
+  transform: scale(1); /* Initial state */
+}
+
+/* Specific images for each part */
+.event .overlay .sec2 .part1::before {
+  background-image: url("../photos/Pumpkin Spice Waffles - Taming of the Spoon.jpg");
+}
+
+.event .overlay .sec2 .part2::before {
+  background-image: url("../photos/Saltimbocca Di Pollo Alla Romana Roulades.jpg");
+}
+
+.event .overlay .sec2 .part3::before {
+  background-image: url("../photos/Pomegranate\ French\ 75\ -\ Danilicious.jpg");
+}
+
+.event .overlay .sec2 .part:hover::before {
+  transform: scale(1.2); /* Scale up the background on hover */
+}
+
+/* Content styling */
+.event .overlay .sec2 .part .collect {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.event .overlay .sec2 .part .collect::before{
+  content: "";
+  position: absolute;
+  top: -131px;
+  left: -180%;
+  background-color: #ffffff82;
+  width: 10%;
+  transform: rotate(45deg);
+  height: 184%;
+  box-shadow: 0px 0px 40px 31px #ffffff82;
+  transition: none;
+}
+
+
+.event .overlay .sec2 .part .collect:hover::before {
+  animation: slide-in 0.6s forwards; /* Trigger the animation on hover */
+}
+
+@keyframes slide-in {
+  from {
+    left: -180%;
+  }
+  to {
+    left: 180%;
+  }
+}
+
+
+
+
+
+
+.event .overlay .sec2 .part .collect .date {
+  font-size: 20px;
+  padding: 3%;
+}
+
+.event .overlay .sec2 .part .collect .date p {
+  background-color: black;
+  width: 46%;
+}
+
+.event .overlay .sec2 .part .collect .text h4 {
+  font-size: 30px;
+  letter-spacing: 5px;
+  padding-right: 1%;
+  padding-left: 1%;
+}
+
+.event .overlay .sec2 .part .collect .text p {
+  font-size: 15px;
+}
+
+/*-----------------------------------------------------------------------*/
+
+
+.event .overlay .btn{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: 61px;
+}
+.event .overlay .btn .main{
+  width: 25%;
+  height: 61%;
+  background-color: #ec9;
+  color: black;
+  letter-spacing: 3px;
+  border: 1px solid #ec9;
+  transition: 0.5s linear;
+  position: relative;
+  cursor: pointer;
+  border-radius: 8px;
+  text-align: center;
+  padding: 2px;
+  display: grid;
+  justify-content: center;
+  align-self: center;
+}
+.event .overlay  .btn .main button[type=submit] {
+
+  width: 100%;
+  font-size: 13px;
+  border: none;
+  border-radius: 8px;
+  background-color: transparent;
+  cursor: pointer;
+  color: black;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.event .overlay .btn .main button[type=submit]::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  border-radius: 8px;
+}
+
+.event .overlay .btn .main button[type=submit]:hover::before {
+  background-color: black;
+  animation: loadingWave 4s linear;
+}
+.event .overlay .btn .main button[type=submit]:hover p{
+  width: 100%;
+  color: white;position: relative;transition: 4s;display: block;
+}
+
+
+/*---------------------------------------------------------------------*/
+
+
+.event .overlay .end{
+  height: 14%;
+  width: 100%;
+  position: relative;
+  display: grid;
+  align-items: center;
+  justify-content: end;
+  font-size: 28px;
+  margin-top: 5%;
+
+}
+
+
+
+.event .overlay  .end  i{
+  font-size: 21px;
+  background-color: #e4a1a1;
+  padding: 11px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.6s;
+  display: grid;
+  justify-content: center;
+}
+.event .overlay  .end  i:hover{
+  color: black;
+}
+.event .overlay  .end  a{
+  text-decoration: none;
+  color: white;
+}
+/*---------------------------------------------------------------------*/
+
+
+
+@media (max-width: 767px) {
+
+  .visible-xs {
+      display: block !important
+  }
+  .hidden-xs {
+      display: none !important
+  }
+  .responsive-paragraph {
+      text-align: center;
+      font-size: 20px !important
+  }
+  .event{
+    height: 1406px;
+
+  }
+  .event .overlay .sec2{
+    display: grid;
+    justify-content: center;
+    gap: 3%;
+    align-items: center;
+    height: 900px;
+  }
+  .event .overlay .sec2 .part {
+    width: calc(100%);
+    margin-right: 0;
+  }
+
+  .event .overlay .btn .main {
+    width: 70%;
+  }
+  .event .overlay .end{
+    margin-top: 13%;
+  }
+}
+
+
+/*=========================================================================================================================*/
+
+
+
+footer{
+ 
+  width: 100%;
+  height: 780px;;
+  position: relative;
+  background-color: #00000054;
+
+
+}
+footer::before{
+  content: "";
+  position: absolute;
+  background-image: url("../photos/del.png");
+  background-position: center;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+
+footer .overlay{
+  
+  height: 100%;
+}
+footer .overlay .content{
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  
+}
+/*---------------------------------------------------*/
+
+footer .overlay .content nav{
+  width: 25%;
+  
+  margin-top: 15%;
+}
+
+
+/*---------------------------------------*/
+footer .overlay .content nav .part{
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+footer .overlay .content nav .part a {
+  text-decoration: none;
+  color: white;
+  text-transform: capitalize;
+  font-size: 22px;
+  position: relative; /* Necessary to position the <hr> properly */
+}
+
+footer .overlay .content nav .part hr {
+  width: 0;
+  background-color: white; /* Change the color to match the background */
+  height: 2px; /* Define the height of the line */
+  border: none; /* Remove any border from <hr> */
+  transition: width 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  opacity: 0;
+  cursor: pointer;
+  
+}
+
+footer .overlay .content nav .part a:hover + hr,
+footer .overlay .content nav .part a:hover + hr + hr {
+  width: 100px; /* Expand to full width on hover */
+  opacity: 1;
+}
+
+
+
+/*---------------------------------------------------*/
+footer .overlay .content .middle{
+  width: 50%;
+
+  background-image: url("../photos/imageedit_2_6008917729.png");
+  background-position: center;
+  background-size: cover;
+  margin-top: 15%;
+}
+footer .overlay .content .middle .back2{
+  height: 100%;
+  background-color: #0000007d;
+  margin-left: 4%;
+  margin-right: 4%;
+  color: white;
+  display: grid;
+  justify-content: center;
+  padding-bottom: 3%;
+}
+footer .overlay .content .middle .back2 .logo{
+  text-transform: uppercase;
+  margin-bottom: 0;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2,auto);
+}
+footer .overlay .content .middle .back2 .logo img{
+  width: 112px;
+}
+footer .overlay .content .middle .back2 .logo p{
+  font-size: 25px;
+}
+footer .overlay .content .middle .back2 .logo p span{
+  font-size: 31px;
+}
+
+
+footer .overlay .content .middle .back2 .text{
+  display: grid;
+  text-transform: capitalize;
+  font-size: 20px;
+}
+
+footer .overlay .content .middle .back2 .text a{
+  color: white;
+  text-decoration: none;
+  margin-bottom: 3%;
+  transition: 0.3s text-decoration;
+}
+footer .overlay .content .middle .back2 .text a:hover{
+  text-decoration: underline;
+}
+/*---------------------------------------------*/
+footer .overlay .content .middle .back2 .form{
+  text-transform: capitalize;
+  font-size: 15px;
+}
+
+footer .overlay .content .middle .back2 .form .enter{
+  display: grid;
+  grid-template-columns: repeat(2,45%);
+  justify-content: center;
+  width: 100%;
+}
+footer .overlay .content .middle .back2 .form .enter .in{
+  padding: 4%;
+  display: grid;
+  grid-template-columns: repeat(2,auto);
+  background-color: #d187a2;
+  border: 1px solid;
+  gap: 5%;
+}
+footer .overlay .content .middle .back2 .form .enter .in input{
+  background-color: transparent;
+  color: white;
+  border: 1px;
+  text-transform: capitalize;
+}
+
+/*========================================================*/
+
+
+footer .overlay .end{
+
+  width: 100%;
+  position: relative;
+  display: grid;
+  align-items: center;
+  justify-content: end;
+  font-size: 28px;
+  margin-top: 5%;
+
+}
+
+
+
+footer .overlay .end  i{
+  font-size: 21px;
+  background-color: #e4a1a1;
+  padding: 11px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.6s;
+  display: grid;
+  justify-content: center;
+}
+footer .overlay .end  i:hover{
+  color: black;
+}
+footer .overlay .end  a{
+  text-decoration: none;
+  color: white;
+}
+
+
+
+
+/*================================================== mobile screen ===============================================================*/
+
+input:focus {
+  outline: none; /* Remove the blue outline */
+}
+
+
+
+
+@media (max-width: 767px) {
+
+  .visible-xs {
+      display: block !important
+  }
+  .hidden-xs {
+      display: none !important
+  }
+  .responsive-paragraph {
+      text-align: center;
+      font-size: 20px !important
+  }
+  footer{
+    height: 1600px;
+  }
+  footer .overlay .content{
+    float: none;
+    display: grid;
+    justify-content: center;
+  }
+  footer .overlay .content .middle{
+    width: 100%;
+  
+  } footer .overlay .content nav{
+    width: 100%;
+  
+  }
+  footer .overlay .content .middle .back2 .form .enter{
+    display: grid;
+    grid-template-columns: repeat(1,100%);
+    justify-content: center;
+    width: 100%;
+  }
+  footer .overlay .content .middle .back2 .logo{
+    text-transform: uppercase;
+    margin-bottom: 0;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(1,auto);
+  }
+  footer .overlay .content .middle .back2 .logo img{
+    width: 165px;
+  }
+  footer .overlay .content .middle .back2 {
+    padding-bottom: 0;
+  }
+  
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 767px) {
+
+  .visible-xs {
+      display: block !important
+  }
+  .hidden-xs {
+      display: none !important
+  }
+  .responsive-paragraph {
+      text-align: center;
+      font-size: 20px !important
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) { /* Small Screen Rules */
+  .container {
+      width: 750px
+  }
+  .visible-sm {
+      display: block !important
+  }
+  .hidden-sm {
+      display: none !important
+  }
+}
+
+
+
+
+@media (min-width: 992px) and (max-width: 1199px) { /* Medium Screen Rules */
+.container {
+    width: 970px
+}
+.visible-md {
+    display: block !important
+}
+.hidden-md {
+    display: none !important
+}
+}
+
+@media (min-width: 1200px) { /* Large Screen Rules */
+.container {
+    width: 1170px
+}
+.visible-lg {
+    display: block !important
+}
+.hidden-lg {
+    display: none !important
+}
+}
+
+  /* Start My Framework */
+  
+  .container {
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px
+  }
+  
+  .text-center {
+    text-align: center
+  }
+  
+  .clearfix {
+    clear: both
+  }
+  
+  .visible-xs,
+  .visible-sm,
+  .visible-md,
+  .visible-lg {
+    display: none
+  }
+  
+  .float-left {
+    float: left
+  }
+  
+  .float-right {
+    float: right
+  }
+  
+  .h1 {
+    font-size: 2em
+  }
+  
+  .responsive-paragraph {
+    line-height: 1.8;
+    font-size: 22px
+  }
+  
+  .responsive-image {
+    width: 100%
+  }
+  
+  .classic-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .img-circle {
+    border-radius: 50%
+  }
+  
+  .img-thumbnail {
+    padding: 3px;
+    background-color: #FFF;
+    border: 1px solid #CCC
+  }
+  .blurred-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.336);
+    backdrop-filter: blur(10px); /* Add blur effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    z-index: 1; /* Ensure the blur effect is behind the content */
+    transition: 0.3s;
+}
+
+  /* End My Framework */
+
+
+
+

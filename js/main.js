@@ -7,15 +7,15 @@ let homeElement = document.querySelector('.back'); // Correctly define homeEleme
 
 const slides = [
     {
-        background: 'url("../photos/Гивико(1)_LE_auto_x2.jpg")',
+        background: 'url("./photos/Гивико(1)_LE_auto_x2.jpg")',
         text: 'where every flavor <br> tells a story'
     },
     {
-        background: 'url("../photos/ppiz.jpg")',
+        background: 'url("./photos/ppiz.jpg")',
         text: 'for the love of <br> delicious food'
     },
     {
-        background: 'url("../photos/Easy 15-minute Cheat Ramen - Use Your Noodles_LE_auto_x2.jpg")',
+        background: 'url("./photos/Easy 15-minute Cheat Ramen - Use Your Noodles_LE_auto_x2.jpg")',
         text: 'flavors inspired by <br> the seasons'
     }
 ];

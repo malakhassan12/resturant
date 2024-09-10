@@ -50,6 +50,7 @@ html{
   width: 100%;
   min-height: 850px;
   overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.466);
 }
 
 .home .back {
@@ -64,7 +65,7 @@ html{
   height: 100%;
   transition: background-image 1s ease-in-out; /* Smooth transition for background image */
   transform-origin: center; /* Center scaling effect */
-  background-image: url("../photos/Meghan Markle’s Spaghetti _ Franska_nl_LE_auto_x2.jpg");
+  background-image: url("./photos/Meghan Markle’s Spaghetti _ Franska_nl_LE_auto_x2.jpg");
 
 }
 
@@ -98,7 +99,7 @@ html{
 .home .overlay{
   width: 100%;
   color: white;
-  background-color: rgba(0, 0, 0, 0.466);
+  
   min-height: 850px;
   position: relative;
   z-index: 1; /* Ensure content is above the background */
